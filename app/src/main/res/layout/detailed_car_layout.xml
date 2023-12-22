@@ -1,0 +1,195 @@
+<!-- detailed_car_layout.xml -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageCar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_image" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageCar"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/viewCarBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:text="Car Brand" />
+
+            <EditText
+                android:id="@+id/editCarBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Car Brand"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textCarManufacturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Manufacturer" />
+
+            <EditText
+                android:id="@+id/editCarManufacturer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Car Brand"
+                android:inputType="text" />
+
+
+            <TextView
+                android:id="@+id/viewCarPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Price" />
+
+
+            <EditText
+                android:id="@+id/editCarPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Price"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/viewCarTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Transmission " />
+
+            <EditText
+                android:id="@+id/editCarTransmission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Car Brand"
+                android:inputType="text" />
+
+
+            <TextView
+                android:id="@+id/viewCarTransmissionType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Привод " />
+
+
+            <EditText
+                android:id="@+id/editCarTransmissionType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Car Brand"
+                android:inputType="text" />
+
+
+
+            <TextView
+                android:id="@+id/viewCarBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Тип кузова" />
+
+            <EditText
+                android:id="@+id/editCarBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Car Brand"
+                android:inputType="text" />
+
+
+
+            <TextView
+                android:id="@+id/viewCarEngine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Двигатель" />
+
+            <EditText
+                android:id="@+id/editCarEngine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Car Brand"
+                android:inputType="text" />
+
+
+            <TextView
+                android:id="@+id/viewCarColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Цвет" />
+
+            <EditText
+                android:id="@+id/editCarColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:hint="Car Brand"
+                android:inputType="text" />
+            <Button
+                android:id="@+id/buttonSelectImagedetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextBrand"
+                android:text="Select Image" />
+            <Button
+                android:id="@+id/buttonSaveChanges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Changes"
+                android:layout_below="@id/editCarColor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<!-- car_list_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Поле ввода для фильтрации по марке -->
+        <EditText
+            android:id="@+id/filtertextBrand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="По марке"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Поле ввода для фильтрации по производителю -->
+        <EditText
+            android:id="@+id/filtertextManifacturer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="По производителю"
+            android:layout_marginEnd="8dp"/>
+    </LinearLayout>
+
+    <!-- Вертикальный LinearLayout для кнопок -->
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Кнопка для сортировки -->
+        <Button
+            android:id="@+id/sortButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сортировка по цене"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Кнопка для фильтрации -->
+        <Button
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Фильтровать"/>
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="200dp"
+        android:id="@+id/recyclerViewCars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+[
+  {
+    "brand": "Toyota",
+    "manufacturer": "Toyota Motors",
+    "price": 25000,
+    "engineType": "Petrol",
+    "transmission_type": "AWD",
+    "transmission": "Automatic",
+    "bodyType": "Sedan",
+    "dimensions": "4500x1800x1400",
+    "color": "Black",
+    "image_url":"file:///data/user/0/com.example.modul_2/files/Honda_civic.jpg"
+  },
+  {
+    "brand": "Honda",
+    "manufacturer": "Honda Motors",
+    "price": 22000,
+    "engineType": "Petrol",
+    "transmission_type": "RWD",
+    "transmission": "Manual",
+    "bodyType": "Hatchback",
+    "dimensions": "4200x1700x1500",
+    "color": "Red",
+    "image_url":"https://bringatrailer.com/wp-content/uploads/2023/04/2000_honda_civic_2000_honda_civic_c8c96b71-4db2-4e30-a022-01f34025aecc-oWn0kb-17495-17496-scaled.jpg"
+  },
+  {
+    "brand": "BMW",
+    "manufacturer": "BMW Motors",
+    "price": 40000,
+    "engineType": "Diesel",
+    "transmission_type": "FWD",
+    "transmission": "Automatic",
+    "bodyType": "SUV",
+    "dimensions": "4800x1900x1600",
+    "color": "Blue",
+    "image_url": "https://img.championat.com/i/j/g/16492416772063088911.jpg"
+  }
+]

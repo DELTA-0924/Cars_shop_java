@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Пример разметки для активности добавления автомобиля -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Добавьте поля для ввода информации о машине, кнопку сохранения и просмотр выбранного изображения -->
+
+    <!-- Например, EditText для ввода бренда автомобиля -->
+    <EditText
+        android:id="@+id/editTextBrand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Brand" />
+
+    <Button
+        android:id="@+id/buttonSelectImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBrand"
+        android:text="Select Image" />
+    <ImageView
+        android:id="@+id/imageViewCar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/buttonSelectImage"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_launcher_foreground"
+        android:visibility="gone" />
+    <EditText
+        android:id="@+id/editTextManufacturer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/editTextBrand"
+        android:hint="Manufacturer" />
+
+    <EditText
+        android:id="@+id/editTextPrice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/editTextManufacturer"
+        android:inputType="numberDecimal"
+        android:hint="Price" />
+    <EditText
+        android:id="@+id/editTextTransmissions"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="transmission" />
+
+
+    <EditText
+        android:id="@+id/editTextTransmissionsType"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="transmissionType" />
+
+    <EditText
+        android:id="@+id/editTextEngineType"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="engineType" />
+
+    <EditText
+        android:id="@+id/editTextBodyType"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="bodyType" />
+
+
+    <EditText
+        android:id="@+id/editTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="color" />
+    <!-- Кнопка для сохранения информации -->
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewCar"
+        android:layout_centerHorizontal="true"
+        android:text="Save" />
+
+
+</LinearLayout>

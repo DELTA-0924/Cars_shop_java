@@ -11,7 +11,7 @@
         android:id="@+id/imageCar"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/textCarBrand"

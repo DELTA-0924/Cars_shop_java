@@ -33,7 +33,7 @@ public class CarListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(carListAdapter);
         EditText filterbrand=findViewById(R.id.filtertextBrand);
-        EditText filterManif=findViewById(R.id.filtertextManifacturer);
+        //EditText filterManif=findViewById(R.id.filtertextManifacturer);
         Button sortButton = findViewById(R.id.sortButton);
         sortButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,11 +42,12 @@ public class CarListActivity extends AppCompatActivity {
             }
         });
         Button filterButton = findViewById(R.id.filterButton);
-        sortButton.setOnClickListener(new View.OnClickListener() {
+        filterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                filterCarsByManufacturer(filterbrand.getText().toString());
-                filterCarsByBrand(filterManif.getText().toString());
+                System.out.println("Button active");
+                //filterCarsByManufacturer(filterManif.getText().toString());
+                filterCarsByBrand(filterbrand.getText().toString());
             }
         });
         carListAdapter.setOnItemClickListener(new CarListAdapter.OnItemClickListener() {
@@ -77,6 +78,17 @@ public class CarListActivity extends AppCompatActivity {
             }
         });
         updateAdapter(carList);
+        carListAdapter.notifyDataSetChanged();
+        carListAdapter.setOnItemClickListener(new CarListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Car car) {
+                // Start a new activity and pass the selected car details
+                Intent intent = new Intent(CarListActivity.this, DetailedCarActivity.class);
+                intent.putExtra("selectedCar", car);
+                Log.d( "id by car in onItemClick: ",car.getId());
+                startActivity(intent);
+            }
+        });
     }
 
     private void filterCarsByManufacturer(String manufacturer) {
@@ -88,6 +100,7 @@ public class CarListActivity extends AppCompatActivity {
         }
         // Создаем новый Intent для перезагрузки активности
         updateAdapter(filteredList);
+        carListAdapter.notifyDataSetChanged();
     }
 
     private void filterCarsByBrand(String brand) {
@@ -98,6 +111,17 @@ public class CarListActivity extends AppCompatActivity {
             }
         }
         updateAdapter(filteredList);
+        carListAdapter.notifyDataSetChanged();
+        carListAdapter.setOnItemClickListener(new CarListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Car car) {
+                // Start a new activity and pass the selected car details
+                Intent intent = new Intent(CarListActivity.this, DetailedCarActivity.class);
+                intent.putExtra("selectedCar", car);
+                Log.d( "id by car in onItemClick: ",car.getId());
+                startActivity(intent);
+            }
+        });
     }
 
 

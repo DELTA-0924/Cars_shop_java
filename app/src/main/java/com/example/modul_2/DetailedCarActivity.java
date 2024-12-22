@@ -123,7 +123,8 @@ public class DetailedCarActivity extends AppCompatActivity {
         selectedCar.setEngineType(editCarEngine.getText().toString());
         selectedCar.setColor(editCarColor.getText().toString());
         String internalImagePath = copyImageToInternalStorage(imageFilePath);
-        selectedCar.setImageUrl(internalImagePath);
+        if(internalImagePath!=null)
+            selectedCar.setImageUrl(internalImagePath);
         CarDataSource carDataSource = new CarDataSource(this);
        Log.d( "car id on saveChanges: ",selectedCar.getTransmission());
         carDataSource.updateCarInJson(selectedCar);
@@ -151,7 +152,12 @@ public class DetailedCarActivity extends AppCompatActivity {
             outputStream.close();
             inputStream.close();
             internalImagePath = internalFile.getAbsolutePath(); // Получаем путь к скопированному изображению
-        } catch (IOException e) {
+        }
+        catch (NullPointerException e){
+            e.printStackTrace();
+            return null;
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
         return internalImagePath;

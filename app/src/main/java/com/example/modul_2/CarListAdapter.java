@@ -38,28 +38,28 @@ public class CarListAdapter extends RecyclerView.Adapter<CarListAdapter.CarViewH
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }
-    @Override
-    public void onBindViewHolder(@NonNull CarViewHolder holder, int position) {
-        Car car = carList.get(position);
+            @Override
+            public void onBindViewHolder(@NonNull CarViewHolder holder, int position) {
+                Car car = carList.get(position);
 
-        holder.textCarBrand.setText(car.getBrand());
-        holder.textCarManufacturer.setText(car.getManufacturer());
-        holder.textCarPrice.setText(String.valueOf(car.getPrice()));
-        String imagePath =car.getImageUrl();
-        String decodedPath = imagePath.replace("\\/", "/");
-        Picasso.get()
-                .load("file://" + decodedPath) // Здесь вызывайте метод, который возвращает URL изображения
-                .placeholder(R.drawable.placeholder_image) // Заглушка, показываемая во время загрузки изображения
-                .error(R.drawable.error_image) // Заглушка, показываемая в случае ошибки загрузки
-                .into(holder.imageCar);
-        Log.d("Image load",car.getImageUrl());
-        holder.itemView.setOnClickListener(view -> {
-            if (listener != null) {
-                listener.onItemClick(car);
+                holder.textCarBrand.setText(car.getBrand());
+                holder.textCarManufacturer.setText(car.getManufacturer());
+                holder.textCarPrice.setText(String.valueOf(car.getPrice()));
+                String imagePath =car.getImageUrl();
+                String decodedPath = imagePath.replace("\\/", "/");
+                Picasso.get()
+                        .load("file://" + decodedPath) // Здесь вызывайте метод, который возвращает URL изображения
+                        .placeholder(R.drawable.placeholder_image) // Заглушка, показываемая во время загрузки изображения
+                        .error(R.drawable.error_image) // Заглушка, показываемая в случае ошибки загрузки
+                        .into(holder.imageCar);
+                Log.d("Image load",car.getImageUrl());
+                holder.itemView.setOnClickListener(view -> {
+                    if (listener != null) {
+                        listener.onItemClick(car);
+                    }
+                    Log.d( "id by car in onBindViewHolder: ",car.getId());
+                });
             }
-            Log.d( "id by car in onBindViewHolder: ",car.getId());
-        });
-    }
 
     @Override
     public int getItemCount() {
